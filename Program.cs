@@ -12,6 +12,14 @@ namespace RegularExpression72
         {
             Console.WriteLine("Wellcome to RegulaExpression");
             Console.ReadLine();
+
+
+            Console.Write("Enter First Name : ");   //taking user input of first name
+            string firstname = Console.ReadLine();
+
+            RegexValidate.FirstName(firstname);
+            Console.ReadLine();
+
         }
     }
 }
