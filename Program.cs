@@ -13,7 +13,6 @@ namespace RegularExpression72
             Console.WriteLine("Wellcome to RegulaExpression");
             Console.ReadLine();
 
-
             Console.Write("Enter First Name : ");   //taking user input of first name
             string firstname = Console.ReadLine();
             RegexValidate.FirstName(firstname);
@@ -23,6 +22,12 @@ namespace RegularExpression72
             string lastname = Console.ReadLine();
             RegexValidate.LastName(lastname);
             Console.ReadLine();
+
+            Console.Write("Enter Email ID: ");   //taking user input of Email ID
+            string Email = Console.ReadLine();
+            RegexValidate.EmailValid(Email);
+            Console.ReadLine();
+
 
         }
     }
