@@ -56,25 +56,18 @@ namespace RegularExpression72
             {
                 Console.WriteLine("Email Is Invalid,Please Enter Valid email Id\n Refer and try again: abc.xyz@bl.co.in");
             }
-
-
-
         }
 
         //this method for validation of phone number
         public static void PhoneNumberValid(string number)
 
         {
-
             string phoneNum = "^[6-9]{1}[0-9]{9}$";
             Regex regex = new Regex(phoneNum);
 
             if (regex.IsMatch(number))
             {
-
                 Console.WriteLine("phone number is valid");
-
-
             }
             else
             {
@@ -84,7 +77,24 @@ namespace RegularExpression72
 
         }
 
+               //this method for validation of password
 
+        public static void PassWordValid(string password)
+        {
+            string pwd = "^[a-zA-Z0-9]{8,}$";
+            Regex regex = new Regex(pwd);
+
+            if (regex.IsMatch(password))
+            {
+                Console.WriteLine("Password is valid ");
+            }
+            else
+            {
+                Console.WriteLine("password is invalid, please Enter is valid \n refer and try again: AazZ1239");
+            }
+
+
+        }
 
     }
 }

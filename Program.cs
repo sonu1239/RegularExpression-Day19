@@ -33,7 +33,10 @@ namespace RegularExpression72
             RegexValidate.PhoneNumberValid(Number);
             Console.ReadLine();
 
-
+            Console.WriteLine("Enter password");
+            string password = Console.ReadLine();
+            RegexValidate.PassWordValid(password);
+            Console.ReadLine();
 
         }
     }
