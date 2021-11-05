@@ -28,6 +28,12 @@ namespace RegularExpression72
             RegexValidate.EmailValid(Email);
             Console.ReadLine();
 
+            Console.WriteLine("Enter phone Number:");
+            string Number = Console.ReadLine();
+            RegexValidate.PhoneNumberValid(Number);
+            Console.ReadLine();
+
+
 
         }
     }

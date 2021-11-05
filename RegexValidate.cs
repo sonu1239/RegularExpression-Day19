@@ -57,8 +57,34 @@ namespace RegularExpression72
                 Console.WriteLine("Email Is Invalid,Please Enter Valid email Id\n Refer and try again: abc.xyz@bl.co.in");
             }
 
+
+
         }
 
-    }
+        //this method for validation of phone number
+        public static void PhoneNumberValid(string number)
 
+        {
+
+            string phoneNum = "^[6-9]{1}[0-9]{9}$";
+            Regex regex = new Regex(phoneNum);
+
+            if (regex.IsMatch(number))
+            {
+
+                Console.WriteLine("phone number is valid");
+
+
+            }
+            else
+            {
+                Console.WriteLine("phone number is invalid, please Enter is Valid \n refer and try again:6523456789");
+
+            }
+
+        }
+
+
+
+    }
 }
