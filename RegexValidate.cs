@@ -87,6 +87,25 @@ namespace RegularExpression72
                 Console.WriteLine(pass + " is invalid. Password must contain atleast one capital letter,one number,one special character");
         }
 
+        //created array to check valid email ID.
+        public static void EmailArr(string[] name)
+        {
+            string email = "^[a-zA-Z0-9]+[+-._]{0,1}[a-zA-Z0-9]*[+-._]?[a-zA-Z0-9]*[@][a-zA-Z0-9]+[.][a-zA-Z0-9]{2,3}([.]?[a-zA-Z]{2,3}){0,1}$";
+            //+ means one or more.
+            //*- zero or more.
+            //?- zero or 1 
+
+            Regex regex = new Regex(email);            //creating a regex named obj with regular exp email.
+            foreach (var word in name)
+            {
+                if (regex.IsMatch(word))
+                {
+                    Console.WriteLine(word + " is valid.");
+                }
+                else
+                    Console.WriteLine(word + " is invalid.");
+            }
+        }
     }
 }
 
