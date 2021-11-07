@@ -10,7 +10,6 @@ namespace RegularExpression72
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome to Regular Expression Program");
             Console.WriteLine();
 
@@ -38,7 +37,6 @@ namespace RegularExpression72
             string password1 = Console.ReadLine();
             RegexValidate.PassWord(password1);
             Console.ReadLine();
-
 
 
         }
