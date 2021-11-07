@@ -56,45 +56,37 @@ namespace RegularExpression72
             {
                 Console.WriteLine("Email Is Invalid,Please Enter Valid email Id\n Refer and try again: abc.xyz@bl.co.in");
             }
+
         }
-
-        //this method for validation of phone number
-        public static void PhoneNumberValid(string number)
-
+        //This method will check whether phone no is valid or not
+        public static void MobileNumValid(string number)
         {
-            string phoneNum = "^[6-9]{1}[0-9]{9}$";
-            Regex regex = new Regex(phoneNum);
+            //Regular expression of mobile number
+            string Mobnumber = "^[0-9]{1,2}[ ]{1}[0-9]{10}$";
+            Regex regex = new Regex(Mobnumber);
 
             if (regex.IsMatch(number))
             {
-                Console.WriteLine("phone number is valid");
+                Console.WriteLine("Mobile Number is valid");
             }
             else
             {
-                Console.WriteLine("phone number is invalid, please Enter is Valid \n refer and try again:6523456789");
-
+                Console.WriteLine("Mobile number is Invalid,Please Enter Valid MObile Number format.");
             }
 
         }
-
-               //this method for validation of password
-
-        public static void PassWordValid(string password)
+        public static void PassWord(string pass)
         {
-            string pwd = "^[a-zA-Z0-9]{8,}$";
-            Regex regex = new Regex(pwd);
-
-            if (regex.IsMatch(password))
+            string pwd = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+            Regex regex = new Regex(pwd);                                           //creating a regex named obj with regular pwd.
+            if (regex.IsMatch(pass))
             {
-                Console.WriteLine("Password is valid ");
+                Console.WriteLine(pass + " is valid.");
             }
             else
-            {
-                Console.WriteLine("password is invalid, please Enter is valid \n refer and try again: AazZ1239");
-            }
-
-
+                Console.WriteLine(pass + " is invalid. Password must contain atleast one capital letter");
         }
-
     }
 }
+
+
