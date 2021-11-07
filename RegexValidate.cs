@@ -77,14 +77,14 @@ namespace RegularExpression72
         }
         public static void PassWord(string pass)
         {
-            string pwd = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";
+            string pwd = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
             Regex regex = new Regex(pwd);                                           //creating a regex named obj with regular pwd.
             if (regex.IsMatch(pass))
             {
                 Console.WriteLine(pass + " is valid.");
             }
             else
-                Console.WriteLine(pass + " is invalid. Password must contain atleast one capital letter & one number");
+                Console.WriteLine(pass + " is invalid. Password must contain atleast one capital letter,one number,one special character");
         }
 
     }

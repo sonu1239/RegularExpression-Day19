@@ -38,7 +38,6 @@ namespace RegularExpression72
             RegexValidate.PassWord(password1);
             Console.ReadLine();
 
-
         }
     }
 }
